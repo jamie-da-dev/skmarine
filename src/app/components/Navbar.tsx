@@ -1,15 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { IoIosBoat } from "react-icons/io";
+import { Bebas_Neue } from "next/font/google";
+
+const bebasNeue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 
 const Navbar: React.FC = () => {
   return (
-    <header className="fixed top-0 left-0 w-full z-10 bg-transparent">
+    <header className="fixed top-0 left-0 w-full z-10 bg-black bg-opacity-75">
       <nav className="container mx-auto flex justify-between items-center py-4 px-8">
         <div className="flex items-center">
           <Link href="/" aria-label="Home">
             <Image
-              src="/logo.png"
+              src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1724988864/logo_sqdqt5.png"
               alt="SK Marine Logo"
               width={200}
               height={100}
@@ -17,7 +20,7 @@ const Navbar: React.FC = () => {
             />
           </Link>
         </div>
-        <ul className="flex items-center space-x-8 text-white font-medium relative">
+        <ul className="flex items-center space-x-11 text-white font-medium relative text-3xl">
           <li>
             <Link
               href="/"
@@ -64,12 +67,12 @@ const Navbar: React.FC = () => {
                 NEED HELP?
               </span>
               <div className="w-8 h-8 flex justify-center items-center transform scale-0 group-hover:scale-100 transition-transform duration-300 absolute">
-                <IoIosBoat className="text-blue-500 text-2xl" />
+                <IoIosBoat className="text-blue-800 text-3xl" />
               </div>
             </div>
             <ul
               id="dropdown-menu"
-              className="absolute right-0 mt-2 w-48 bg-white text-black rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              className="absolute right-0 mt-1 w-56 bg-white text-black rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
             >
               <li>
                 <Link
