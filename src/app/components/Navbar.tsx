@@ -7,24 +7,24 @@ const bebasNeue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 
 const Navbar: React.FC = () => {
   return (
-    <header className="fixed top-0 left-0 w-full z-10 bg-black bg-opacity-75">
+    <header className="fixed top-0 left-0 w-full z-10 bg-white shadow-lg">
       <nav className="container mx-auto flex justify-between items-center py-4 px-8">
-        <div className="flex items-center">
+        <div className="flex items-center absolute top-1">
           <Link href="/" aria-label="Home">
             <Image
-              src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1724988864/logo_sqdqt5.png"
+              src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1724999087/logo_g5xnj4.png"
               alt="SK Marine Logo"
-              width={200}
+              width={300}
               height={100}
               className="object-contain"
             />
           </Link>
         </div>
-        <ul className="flex items-center space-x-11 text-white font-medium relative text-3xl">
+        <ul className="flex items-center space-x-11 text-black font-medium text-2xl ml-auto">
           <li>
             <Link
               href="/"
-              className="hover:text-gray-400 transition-all duration-300"
+              className="hover:text-blue-800 transition-all duration-300"
               aria-label="Home"
             >
               HOME
@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
           <li>
             <Link
               href="/services"
-              className="hover:text-gray-400 transition-all duration-300"
+              className="hover:text-blue-800 transition-all duration-300"
               aria-label="Services"
             >
               SERVICES
@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
           <li>
             <Link
               href="/about"
-              className="hover:text-gray-400 transition-all duration-300"
+              className="hover:text-blue-800 transition-all duration-300"
               aria-label="About"
             >
               ABOUT
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
           <li>
             <Link
               href="/contact"
-              className="hover:text-gray-400 transition-all duration-300"
+              className="hover:text-blue-800 transition-all duration-300"
               aria-label="Contact"
             >
               CONTACT
@@ -61,23 +61,23 @@ const Navbar: React.FC = () => {
             <div
               aria-expanded="false"
               aria-controls="dropdown-menu"
-              className="bg-white text-black px-4 py-2 rounded transition-all duration-300 flex items-center justify-center"
+              className="bg-blue-950 text-white px-4 py-2 rounded transition-all duration-300 flex items-center justify-center"
             >
               <span className="group-hover:opacity-0 transition-opacity duration-300">
                 NEED HELP?
               </span>
               <div className="w-8 h-8 flex justify-center items-center transform scale-0 group-hover:scale-100 transition-transform duration-300 absolute">
-                <IoIosBoat className="text-blue-800 text-3xl" />
+                <IoIosBoat className="text-blue-100 text-3xl" />
               </div>
             </div>
             <ul
               id="dropdown-menu"
-              className="absolute right-0 mt-1 w-56 bg-white text-black rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              className="absolute right-0 mt-1 w-56 bg-blue-950 text-white rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
             >
               <li>
                 <Link
                   href="/booking"
-                  className="block hover:bg-gray-200 px-4 py-2 rounded"
+                  className="block hover:bg-gray-900 px-4 py-2 rounded"
                   aria-label="Booking"
                 >
                   BOOKING
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
               <li>
                 <Link
                   href="/work-enquiry"
-                  className="block hover:bg-gray-200 px-4 py-2 rounded"
+                  className="block hover:bg-gray-900 px-4 py-2 rounded"
                   aria-label="Work Enquiry"
                 >
                   WORK ENQUIRY
@@ -95,7 +95,7 @@ const Navbar: React.FC = () => {
               <li>
                 <Link
                   href="/general-question"
-                  className="block hover:bg-gray-200 px-4 py-2 rounded"
+                  className="block hover:bg-gray-900 px-4 py-2 rounded"
                   aria-label="General Question"
                 >
                   GENERAL QUESTION
