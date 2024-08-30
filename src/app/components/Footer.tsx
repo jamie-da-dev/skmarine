@@ -11,37 +11,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-blue-950 text-white py-6 relative">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-xl">
-        <div className="text-2xl flex items-center mb-0 md:mb-0">
-          SK MARINE NZ
-        </div>
-        <div className="flex items-center mb-6 md:mb-0">
+        <div className="text-2xl flex items-center">SK MARINE NZ</div>
+        <div className="flex items-center">
           Your Marine Experts for Every Voyage.
-        </div>
-        <div className="text-2xl flex space-x-6  mb-0 md:mb-0">
-          <Link
-            href="/about"
-            className="hover:text-blue-600 transition-colors duration-300"
-          >
-            About
-          </Link>
-          <Link
-            href="/services"
-            className="hover:text-blue-600 transition-colors duration-300"
-          >
-            Services
-          </Link>
-          <Link
-            href="/contact"
-            className="hover:text-blue-600 transition-colors duration-300"
-          >
-            Contact
-          </Link>
-          <Link
-            href="/booking"
-            className="hover:text-blue-600 transition-colors duration-300"
-          >
-            Booking
-          </Link>
         </div>
       </div>
       <div className="container mx-auto flex flex-col items-center mt-6 border-t border-blue-900 pt-6">
@@ -82,10 +54,12 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto text-center mt-8 text-base text-blue-900">
+      <div className="container mx-auto text-center mt-8 text-base text-blue-800">
         © 2024 SK Marine. All rights reserved. | Developed by{" "}
         <a
           href="https://jamie-da-dev.com/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-blue-700 hover:underline"
         >
           Jamie Da Dev

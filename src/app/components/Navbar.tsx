@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
     <header className="fixed top-0 left-0 w-full z-10 bg-white shadow-lg">
       <nav className="container mx-auto flex justify-between items-center py-4 px-8">
         <div className="flex items-center absolute top-1">
-          <Link href="/" aria-label="Home">
+          <Link href="#home" aria-label="Home">
             <Image
               src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1724999087/logo_g5xnj4.png"
               alt="SK Marine Logo"
@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
         <ul className="flex items-center space-x-11 text-black font-medium text-2xl ml-auto">
           <li>
             <Link
-              href="/"
+              href="#home"
               className="hover:text-blue-800 transition-all duration-300"
               aria-label="Home"
             >
@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
           </li>
           <li>
             <Link
-              href="/services"
+              href="#service"
               className="hover:text-blue-800 transition-all duration-300"
               aria-label="Services"
             >
@@ -41,20 +41,11 @@ const Navbar: React.FC = () => {
           </li>
           <li>
             <Link
-              href="/about"
+              href="#about"
               className="hover:text-blue-800 transition-all duration-300"
               aria-label="About"
             >
               ABOUT
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/contact"
-              className="hover:text-blue-800 transition-all duration-300"
-              aria-label="Contact"
-            >
-              CONTACT
             </Link>
           </li>
           <li className="relative group">
@@ -74,31 +65,23 @@ const Navbar: React.FC = () => {
               id="dropdown-menu"
               className="absolute right-0 mt-1 w-56 bg-blue-950 text-white rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
             >
+              <li></li>
               <li>
                 <Link
-                  href="/booking"
-                  className="block hover:bg-gray-900 px-4 py-2 rounded"
-                  aria-label="Booking"
-                >
-                  BOOKING
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/work-enquiry"
-                  className="block hover:bg-gray-900 px-4 py-2 rounded"
-                  aria-label="Work Enquiry"
-                >
-                  WORK ENQUIRY
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/general-question"
+                  href="#contact"
                   className="block hover:bg-gray-900 px-4 py-2 rounded"
                   aria-label="General Question"
                 >
                   GENERAL QUESTION
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#contact"
+                  className="block hover:bg-gray-900 px-4 py-2 rounded"
+                  aria-label="Work Enquiry"
+                >
+                  WORK ENQUIRY
                 </Link>
               </li>
             </ul>

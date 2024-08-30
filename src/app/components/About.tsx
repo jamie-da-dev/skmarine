@@ -2,7 +2,7 @@ import React from "react";
 
 const About: React.FC = () => {
   return (
-    <section className="bg-gray-100 py-16 relative">
+    <section id="about" className="scroll-offset bg-gray-100 py-16 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-7xl font-bold text-blue-950">About</h2>
@@ -39,15 +39,15 @@ const About: React.FC = () => {
               deserves the best care possible.
             </p>
             <p className="mt-4 text-2xl text-gray-500 leading-relaxed mb-10 hover:text-gray-900 transition-colors duration-300">
-              At SK Marine, we're not just about fixing boats; we're about
-              building relationships, ensuring your vessel is in the best hands,
-              and making your marine experience as smooth and enjoyable as
-              possible.
+              At SK Marine, we&apos;re not just about fixing boats; we&apos;re
+              about building relationships, ensuring your vessel is in the best
+              hands, and making your marine experience as smooth and enjoyable
+              as possible.
             </p>
             <p className="mt-4 text-2xl text-gray-900 leading-relaxed hover:text-red-600 transition-colors duration-300">
               Whether you need routine maintenance, complex repairs, or expert
-              advice, we're here to help. Welcome to SK Marine—where your boat
-              is our priority.
+              advice, we&apos;re here to help. Welcome to SK Marine—where your
+              boat is our priority.
             </p>
           </div>
         </div>

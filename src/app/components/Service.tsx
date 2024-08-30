@@ -59,7 +59,10 @@ const services = [
 
 const Services: React.FC = () => {
   return (
-    <section className="bg-white py-16 text-white relative">
+    <section
+      id="service"
+      className="scroll-offset bg-white py-16 text-white relative"
+    >
       <div className="container mx-auto text-center">
         <h2 className="text-7xl text-blue-950 font-bold mb-12">SERVICES</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-5">
