@@ -5,10 +5,10 @@ const About: React.FC = () => {
     <section id="about" className="scroll-offset bg-gray-100 py-16 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-7xl font-bold text-blue-950">About</h2>
+          <h2 className="text-6xl font-bold text-blue-950">About</h2>
           <p className="mt-12 text-4xl text-blue-900">
-            Driven by a passion for delivering top-quality marine services with
-            a personal touch.
+            Driven by a passion for delivering top-quality outboard services
+            with a personal touch.
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -34,20 +34,25 @@ const About: React.FC = () => {
             </p>
             <p className="mt-4 text-2xl text-gray-500 leading-relaxed mb-10 hover:text-gray-900 transition-colors duration-300">
               In 2022, I took the bold step of starting my own venture—SK
-              Marine. Our business is built on the foundation of years of
-              experience, a strong work ethic, and the belief that every boat
-              deserves the best care possible.
+              Marine. It is built on the foundation of years of experience, a
+              strong work ethic, and the belief that every boat deserves the
+              best care possible.
             </p>
             <p className="mt-4 text-2xl text-gray-500 leading-relaxed mb-10 hover:text-gray-900 transition-colors duration-300">
-              At SK Marine, we&apos;re not just about fixing boats; we&apos;re
+              At SK Marine, I am not just about fixing outboard motors; I am
               about building relationships, ensuring your vessel is in the best
               hands, and making your marine experience as smooth and enjoyable
               as possible.
             </p>
-            <p className="mt-4 text-2xl text-gray-900 leading-relaxed hover:text-red-600 transition-colors duration-300">
+            <p className="mt-4 text-2xl text-gray-900 leading-relaxed mb-10 hover:text-red-600 transition-colors duration-300">
               Whether you need routine maintenance, complex repairs, or expert
-              advice, we&apos;re here to help. Welcome to SK Marine—where your
-              boat is our priority.
+              advice, I am here to help. Welcome to SK Marine—where your boat is
+              my priority.
+            </p>
+            <p className="mt-4 text-2xl text-blue-950 leading-relaxed">
+              Jack Shin,
+              <br />
+              SK MARINE NZ
             </p>
           </div>
         </div>
