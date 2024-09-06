@@ -9,6 +9,7 @@ const Intro: React.FC = () => {
         autoPlay
         loop
         muted
+        playsInline
         aria-hidden="true"
       />
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-50"></div>
