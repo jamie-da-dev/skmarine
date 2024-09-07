@@ -177,7 +177,7 @@ const Contact: React.FC = () => {
               <a
                 href="#general-question"
                 onClick={() => setFormType("general")}
-                className={`w-1/2 py-2 text-2xl border border-b-0 border-gray-300 rounded-tl-lg ${
+                className={`w-1/2 py-3 sm:text-2xl text-xl border border-b-0 border-gray-300 rounded-tl-lg transition-colors duration-300 ${
                   formType === "general"
                     ? "bg-blue-950 text-white"
                     : "bg-white text-black"
@@ -188,7 +188,7 @@ const Contact: React.FC = () => {
               <a
                 href="#work-enquiry"
                 onClick={() => setFormType("work")}
-                className={`w-1/2 py-2 text-2xl border border-b-0 border-gray-300 rounded-tr-lg ${
+                className={`w-1/2 py-3 sm:text-2xl text-xl border border-b-0 border-gray-300 rounded-tr-lg transition-colors duration-300 ${
                   formType === "work"
                     ? "bg-blue-950 text-white"
                     : "bg-white text-black"

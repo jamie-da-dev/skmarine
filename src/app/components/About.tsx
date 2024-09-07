@@ -6,7 +6,7 @@ const About: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-6xl font-bold text-blue-950">About</h2>
-          <p className="mt-12 text-4xl text-blue-900">
+          <p className="mt-12 sm:text-4xl text-3xl text-blue-900">
             Driven by a passion for delivering top-quality outboard services
             with a personal touch.
           </p>
