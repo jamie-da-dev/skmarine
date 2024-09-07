@@ -61,7 +61,7 @@ const Services: React.FC = () => {
   return (
     <section
       id="service"
-      className="scroll-offset bg-white py-16 text-white relative"
+      className="scroll-offset bg-white py-16 text-white relative overflow-x-hidden"
     >
       <div className="container mx-auto text-center">
         <h2 className="text-6xl text-blue-950 font-bold mb-12">SERVICES</h2>

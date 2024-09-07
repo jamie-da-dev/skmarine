@@ -4,7 +4,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 .scroll-offset {
   scroll-margin-top: 80px;

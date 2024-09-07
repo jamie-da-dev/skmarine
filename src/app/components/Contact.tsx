@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
-import { useRouter } from "next/router";
 
 const Contact: React.FC = () => {
   const [formType, setFormType] = useState<"general" | "work">("general");
@@ -21,6 +20,10 @@ const Contact: React.FC = () => {
     } else if (hash === "#work-enquiry") {
       setFormType("work");
     }
+    setFormData((prevData) => ({
+      ...prevData,
+      subject: "",
+    }));
   }, []);
 
   useEffect(() => {

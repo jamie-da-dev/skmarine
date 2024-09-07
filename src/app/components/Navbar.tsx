@@ -69,7 +69,6 @@ const Navbar: React.FC = () => {
             }}
           />
         </div>
-        {/* Hamburger Icon for lg screens and below */}
         <div className="flex items-center lg:hidden ml-auto z-50">
           <button onClick={toggleMenu} aria-label="Toggle Menu">
             {isMenuOpen ? (
@@ -79,7 +78,6 @@ const Navbar: React.FC = () => {
             )}
           </button>
         </div>
-        {/* Navigation Menu */}
         <ul
           ref={menuRef}
           className={`fixed inset-0 bg-white z-30 flex flex-col items-center justify-center lg:relative lg:flex-row lg:items-center lg:space-x-5 text-black font-medium text-2xl ml-auto transition-transform duration-300 ease-in-out ${

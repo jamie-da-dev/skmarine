@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../app/styles/globals.css";
 import { Bebas_Neue } from "next/font/google";
 
 const bebasNeue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
