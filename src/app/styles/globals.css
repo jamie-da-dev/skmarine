@@ -12,6 +12,16 @@ html {
   scroll-margin-top: 144px;
 }
 
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @media (max-width: 1024px) {
   .scroll-offset {
     scroll-margin-top: 62px;

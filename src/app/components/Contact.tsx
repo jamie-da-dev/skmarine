@@ -135,13 +135,12 @@ const Contact: React.FC = () => {
             <option value="engine-maintenance">Engine Maintenance</option>
             <option value="electrical-repair">Electrical Repair</option>
             <option value="fuel-maintenance">Fuel Maintenance</option>
-            <option value="hull-repairs">Hull Repairs</option>
+            <option value="trailer-maintenance">Trailer Maintenance</option>
             <option value="propulsion-services">Propulsion Services</option>
             <option value="plumbing-cooling">Plumbing & Cooling</option>
             <option value="safety-installation">
               Safety Equipment Installation
             </option>
-            <option value="trailer-maintenance">Trailer Maintenance</option>
             <option value="other">Other</option>
           </select>
         )}

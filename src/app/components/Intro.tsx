@@ -19,7 +19,7 @@ const Intro: React.FC = () => {
           alt="SK MARINE LOGO"
           className="2xl:max-w-2xl xl:max-w-xl lg:max-w-lg md:max-w-sm sm:max-w-xs max-w-[50%] ml-auto h-auto"
         />
-        <p className="mt-2 2xl:text-5xl xl:text-4xl lg:text-4xl md:text-2xl sm:text-2xl text-2xl text-gray-300">
+        <p className="mt-2 2xl:text-5xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-2xl text-2xl text-gray-300">
           Your Marine Experts for Every Voyage.
         </p>
       </div>

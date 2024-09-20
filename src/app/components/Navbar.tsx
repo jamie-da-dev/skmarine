@@ -67,6 +67,7 @@ const Navbar: React.FC = () => {
               setIsMenuOpen(false);
               scrollToSection("home");
             }}
+            priority
           />
         </div>
         <div className="flex items-center lg:hidden ml-auto z-50">
