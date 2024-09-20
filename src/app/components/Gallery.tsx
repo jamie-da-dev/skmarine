@@ -21,10 +21,12 @@ interface CustomImage {
 const Gallery: React.FC<GalleryProps> = ({ isOpen, onClose }) => {
   const [images, setImages] = useState<CustomImage[]>([]);
   const [index, setIndex] = useState(-1);
+  const [loading, setLoading] = useState<boolean>(true);
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const fetchImages = async () => {
+      setLoading(true);
       const imagesListRef = ref(storage, "images/");
       const response = await listAll(imagesListRef);
       const urls = await Promise.all(
@@ -40,6 +42,7 @@ const Gallery: React.FC<GalleryProps> = ({ isOpen, onClose }) => {
                 height: img.height,
                 caption: item.name,
               });
+              setLoading(false);
             };
             img.src = url;
           });
@@ -62,11 +65,15 @@ const Gallery: React.FC<GalleryProps> = ({ isOpen, onClose }) => {
 
   const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
-      handleClose();
+      handleCloseGallery();
     }
   };
 
   const handleClose = () => {
+    setIndex(-1);
+  };
+
+  const handleCloseGallery = () => {
     setIndex(-1);
     onClose();
   };
@@ -77,6 +84,14 @@ const Gallery: React.FC<GalleryProps> = ({ isOpen, onClose }) => {
   const handleMoveNext = () => setIndex((index + 1) % images.length);
 
   if (!isOpen) return null;
+
+  if (loading) {
+    return (
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="text-white text-2xl">Loading...</div>
+      </div>
+    );
+  }
 
   const currentImage = images[index];
 

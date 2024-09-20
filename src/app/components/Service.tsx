@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import Gallery from "./Gallery";
@@ -62,6 +62,21 @@ const services = [
 
 const Services: React.FC = () => {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [imageWidth, setImageWidth] = useState<number>(350);
+  const [rotateSpeed, setRotateSpeed] = useState<number>(125);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setImageWidth(window.innerWidth < 1280 ? 200 : 350);
+      setRotateSpeed(window.innerWidth < 1280 ? 75 : 125);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section
       id="service"
@@ -100,10 +115,10 @@ const Services: React.FC = () => {
               </div>
             );
           })}
-        </div>{" "}
+        </div>
         <button
           onClick={() => setIsGalleryOpen(true)}
-          className="bg-blue-950 hover:bg-blue-800 transition duration-300 text-white text-2xl font-bold py-2 px-4 rounded mt-16"
+          className="bg-blue-950 hover:bg-blue-800 transition duration-300 text-white text-2xl py-2 px-4 rounded mt-16 max-w-[80vw] w-[500px]"
         >
           Previous Work
         </button>
@@ -111,11 +126,11 @@ const Services: React.FC = () => {
           isOpen={isGalleryOpen}
           onClose={() => setIsGalleryOpen(false)}
         />
-        <Marquee speed={125} className="pt-10">
+        <Marquee speed={rotateSpeed} className="pt-10">
           <Image
             src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1724988277/yamaha_kymu75.png"
             alt="Yamaha Logo"
-            width={400}
+            width={imageWidth}
             height={100}
             style={{ width: "auto", height: "auto" }}
             className="object-contain mr-12"
@@ -124,7 +139,7 @@ const Services: React.FC = () => {
           <Image
             src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1724988277/suzuki_ycapgc.png"
             alt="Suzuki Logo"
-            width={400}
+            width={imageWidth}
             height={100}
             style={{ width: "auto", height: "auto" }}
             className="object-contain mr-12"
@@ -132,7 +147,7 @@ const Services: React.FC = () => {
           <Image
             src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1724988277/honda_exhrvd.png"
             alt="Honda Logo"
-            width={400}
+            width={imageWidth}
             height={100}
             style={{ width: "auto", height: "auto" }}
             className="object-contain mr-12"
@@ -140,23 +155,58 @@ const Services: React.FC = () => {
           <Image
             src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1724988277/mercury_lrtxxb.png"
             alt="Mercury Logo"
-            width={400}
+            width={imageWidth}
             height={100}
             style={{ width: "auto", height: "auto" }}
             className="object-contain mr-12"
-          />{" "}
+          />
           <Image
             src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1726721529/Evinrude_Brp_j33lls.png"
             alt="Evinrude Logo"
-            width={400}
+            width={imageWidth}
             height={100}
             style={{ width: "auto", height: "auto" }}
             className="object-contain mr-12"
-          />{" "}
+          />
           <Image
             src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1726721776/tohatsu-logo_y0oavv.png"
             alt="Tohatsu Logo"
-            width={400}
+            width={imageWidth}
+            height={100}
+            style={{ width: "auto", height: "auto" }}
+            className="object-contain mr-12"
+          />
+        </Marquee>
+        <Marquee direction="right" speed={rotateSpeed} className="pt-10">
+          <Image
+            src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1726831369/seadoo_qrqjqi.png"
+            alt="Seadoo Logo"
+            width={imageWidth}
+            height={100}
+            style={{ width: "auto", height: "auto" }}
+            className="object-contain mr-12"
+            priority
+          />
+          <Image
+            src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1726831370/kawasaki_y1mvzr.png"
+            alt="Kawasaki Logo"
+            width={imageWidth}
+            height={100}
+            style={{ width: "auto", height: "auto" }}
+            className="object-contain mr-12"
+          />
+          <Image
+            src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1726831774/yanmar_fiixbw.webp"
+            alt="Yanmar Logo"
+            width={imageWidth}
+            height={100}
+            style={{ width: "auto", height: "auto" }}
+            className="object-contain mr-12"
+          />
+          <Image
+            src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1726831370/volvo_bsvee1.png"
+            alt="Volvo Logo"
+            width={imageWidth}
             height={100}
             style={{ width: "auto", height: "auto" }}
             className="object-contain mr-12"

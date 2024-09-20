@@ -12,7 +12,7 @@ const Intro: React.FC = () => {
         playsInline
         aria-hidden="true"
       />
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-50"></div>
+      <div className="absolute h-[200vh] inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-50"></div>
       <div className="absolute md:bottom-8 md:right-8 lg:bottom-16 lg:right-16 bottom-4 right-4 sm:text-center text-right">
         <img
           src="https://res.cloudinary.com/dzdr7yyz4/image/upload/v1725706558/logo2_pcgy20.png"

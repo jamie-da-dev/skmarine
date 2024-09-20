@@ -4,6 +4,7 @@ import {
   IoIosMail,
   IoIosCall,
   IoLogoInstagram,
+  IoLogoFacebook,
   IoIosClock,
 } from "react-icons/io";
 
@@ -17,7 +18,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="container mx-auto flex flex-col items-center mt-6 border-t border-blue-900 pt-6">
-        <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-16 text-sm">
+        <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-16 text-sm">
           <div className="flex items-center space-x-2">
             <IoIosCall className="text-blue-700 text-3xl" />
             <a
@@ -41,6 +42,19 @@ const Footer: React.FC = () => {
             <a
               href="https://www.instagram.com/sk_marine_nz/"
               className="hover:text-blue-600 transition-colors duration-300 text-lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              SK MARINE NZ
+            </a>
+          </div>{" "}
+          <div className="flex items-center space-x-2">
+            <IoLogoFacebook className="text-blue-700 text-3xl" />
+            <a
+              href="https://www.facebook.com/profile.php?id=100076468861867"
+              className="hover:text-blue-600 transition-colors duration-300 text-lg"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               SK MARINE NZ
             </a>

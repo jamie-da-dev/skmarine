@@ -37,10 +37,9 @@ const AdminDashboard: React.FC = () => {
   const imagesListRef = ref(storage, "images/");
 
   useEffect(() => {
-    if (!loading) {
-      if (!user || user.email !== ALLOWED_EMAIL) {
-        router.push("/login");
-      }
+    if (loading) return;
+    if (!user || user.email !== ALLOWED_EMAIL) {
+      router.push("/login");
     }
   }, [loading, user, router]);
 
