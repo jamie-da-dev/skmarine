@@ -26,6 +26,7 @@ const Gallery: React.FC<GalleryProps> = ({ isOpen, onClose }) => {
 
   useEffect(() => {
     const fetchImages = async () => {
+      if (images.length > 0) return;
       setLoading(true);
       const imagesListRef = ref(storage, "images/");
       const response = await listAll(imagesListRef);
@@ -88,6 +89,12 @@ const Gallery: React.FC<GalleryProps> = ({ isOpen, onClose }) => {
   if (loading) {
     return (
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <button
+          onClick={handleCloseGallery}
+          className="fixed top-4 right-8 text-white text-6xl"
+        >
+          &times;
+        </button>
         <div className="text-white text-2xl">Loading...</div>
       </div>
     );
