@@ -38,7 +38,7 @@ export async function POST(request: Request) {
     await sendEmail(
       [process.env.EMAIL_TO as string],
       `New Message Received: ${subject}`,
-      render(AdminNotification({ name, subject, message }))
+      render(AdminNotification({ name, email, subject, message }))
     );
 
     return new Response(

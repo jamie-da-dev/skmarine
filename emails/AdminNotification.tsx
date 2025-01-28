@@ -13,12 +13,14 @@ import styles from "./Emails";
 
 interface AdminNotificationProps {
   name: string;
+  email: string;
   message: string;
   subject: string;
 }
 
 const AdminNotification = ({
   name,
+  email,
   message,
   subject,
 }: AdminNotificationProps) => (
@@ -48,12 +50,13 @@ const AdminNotification = ({
           </a>
         </Section>
         <Text style={styles.bodyText}>
-          You have received a new message from
+          You have received a new message from:
         </Text>
-        <Text style={styles.bodyText}>{name}</Text>
+        <Text style={styles.bodyText}>Name: {name}</Text>
+        <Text style={styles.bodyText}>Email: {email}</Text>
         <Section style={styles.messageContainer}>
-          <Text style={styles.messageText}>{subject}</Text>
-          <Text style={styles.messageText}>{message}</Text>
+          <Text style={styles.messageText}>Subject: {subject}</Text>
+          <Text style={styles.messageText}>Message: {message}</Text>
         </Section>
       </Container>
     </Body>
